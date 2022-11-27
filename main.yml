@@ -11,4 +11,4 @@
 
   - name: Debugear
     debug:
-      msg: "{{ salida.stdout | quote }}"  
+      msg: "El {{ svc }} del {{ inventory_hostname }} se encuentra {{ salida.stdout | quote }}"  
