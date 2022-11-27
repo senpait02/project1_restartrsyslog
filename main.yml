@@ -4,3 +4,11 @@
   become: true
   roles:
   - rsyslog
+  post_tasks:
+  - name: Ver que onda
+    shell: " systemctl status rsyslog"
+    register: salida
+
+  - name: Debugear
+    debug:
+    msg: "{{ salida.stdout | quote }}"  
