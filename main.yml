@@ -6,7 +6,7 @@
   - rsyslog
   post_tasks:
   - name: Ver que onda
-    shell: " systemctl status rsyslog"
+    shell: " systemctl status rsyslog | grep -i 'active' | awk '{print $2}' "
     register: salida
 
   - name: Debugear
