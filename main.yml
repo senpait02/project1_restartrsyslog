@@ -11,4 +11,4 @@
 
   - name: Debugear
     debug:
-    msg: "{{ salida.stdout | quote }}"  
+      msg: "{{ salida.stdout | quote }}"  
