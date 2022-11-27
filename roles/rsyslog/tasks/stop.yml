@@ -1,0 +1,6 @@
+---
+- name: Parando el "{{ svc }}"
+  service: 
+    name: "{{ item }}"
+    state: stopped
+  with_items: "{{ svc }}"

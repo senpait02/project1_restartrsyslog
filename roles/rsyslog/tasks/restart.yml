@@ -1,0 +1,6 @@
+---
+- name: Script para reiniciar el {{ svc }} en el {{ inventory_hostname }}
+  service:
+    name: "{{ item }}"
+    state: restarted
+  with_items: "{{ svc }}"  

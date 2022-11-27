@@ -1,0 +1,6 @@
+---
+- name: Iniciando el "{{ svc }}"
+  service: 
+    name: "{{ item }}"
+    state: started
+  with_items: "{{ svc }}"

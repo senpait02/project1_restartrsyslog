@@ -1,0 +1,13 @@
+---
+- name: Iniciar el {{ svc }}
+  import_tasks: start.yml
+  when: comando == "iniciar"
+
+
+- name: Iniciar el {{ svc }}
+  import_tasks: stop.yml
+  when: comando == "parar"
+
+- name: Iniciar el {{ svc }}
+  import_tasks: restart.yml
+  when: comando == "reiniciar"
